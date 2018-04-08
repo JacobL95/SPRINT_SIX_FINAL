@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Weather Or Not</string>
+
+    <string-array name="Activities">
+        <item>Open Activity List</item>
+        <item>Basketball</item>
+        <item>Biking</item>
+        <item>Camping</item>
+        <item>Driving</item>
+        <item>Fishing</item>
+        <item>Football</item>
+        <item>Golfing</item>
+        <item>Hiking</item>
+        <item>Kite Flying</item>
+        <item>Rock Climbing</item>
+        <item>Running</item>
+        <item>Sailing</item>
+        <item>Skiing</item>
+        <item>Soccer</item>
+        <item>Swimming</item>
+        <item>Tennis</item>
+        <item>Water Sports</item>
+        <item>Wind Surfing</item>
+    </string-array>
+
 </resources>

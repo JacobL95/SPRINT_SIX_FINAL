@@ -12,7 +12,6 @@ public class JSON_Parser {
 
     public static Weather_Hub_Model getWeather(String data){
         Weather_Hub_Model weather = new Weather_Hub_Model();
-
         try {
             JSONObject jsonObject = new JSONObject(data);
             Location_Model location = new Location_Model();
@@ -66,3 +65,9 @@ public class JSON_Parser {
         }
     }
 }
+/*
+Got a lot of help for this parser on Ajay Murmu's Youtube Channel. Heres a link to it
+https://www.youtube.com/watch?v=JPrFQcAdyyc&t=6054s
+This Video was made by Paulo Dichone, it helped me figure out how to build the parser, and connections to api.
+It also gave some tips on how to make setters and getters for easy access.
+ */

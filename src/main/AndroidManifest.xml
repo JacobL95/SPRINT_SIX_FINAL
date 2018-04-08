@@ -19,6 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActivityInfo" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".HowToUseActivity" />
+        <activity android:name=".LocationChangeActivity" />
+        <activity android:name=".FullWeather"></activity>
     </application>
 
 </manifest>
