@@ -1,20 +1,15 @@
 package com.example.jacob.weatherornot;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.view.menu.MenuPopupHelper;
-import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import Information.Information_Directory;
 import Information.JSON_Parser;
 import Information.Weather_Client;
@@ -23,8 +18,6 @@ import Structure_Model.Weather_Hub_Model;
 import Utility.CONDITION_Utility;
 import Utility.DISPLAY_Utility;
 
-import static java.sql.DriverManager.println;
-
 public class ActivityInfo extends AppCompatActivity {
 
     TextView DegreeSymbol, Location, ActivityTitle, Wind, WindSpeed, Mph, Temperature, Temp, Condition, CurrentCondition, WeatherReport;
@@ -32,8 +25,6 @@ public class ActivityInfo extends AppCompatActivity {
     Weather_Hub_Model WeatherForActivity = new Weather_Hub_Model();
     SwipeRefreshLayout SwipeDownActivity;
     SharedPreferences ActivitySaver;
-    String IconNeededForActivity, DescriptionNeeded;
-    int WindMod;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,8 +111,6 @@ public class ActivityInfo extends AppCompatActivity {
         String SavedActivity = ActivitySaver.getString("Saved Activity", "");
         WeatherReport.setText(new Optimal_Condtions_Model().Optimal_Activity(SavedActivity, temp, condition, wind));
     }
-
-
 
     public void FailSafe() {
         Toast.makeText(ActivityInfo.this,"Error Connecting to Server", Toast.LENGTH_LONG).show();

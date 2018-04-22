@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/Instructions"
-        android:title="How to Use"
-        app:showAsAction="never" />
+        android:title="How to Use" />
+    <item
+        android:id="@+id/ChangeLocation"
+        android:title="Location" />
     <item
         android:id="@+id/Details"
         android:title="Details" />
     <item
-        android:id="@+id/ChangeLocation"
-        android:title="Location"
-        app:showAsAction="never" />
+        android:id="@+id/Forecast"
+        android:title="5 Day" />
     <item
         android:id="@+id/About"
         android:title="About"

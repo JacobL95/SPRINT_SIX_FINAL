@@ -47,7 +47,7 @@ public class DISPLAY_UtilityTest {
 
     @Test
     public void KELVIN_TO_FAHRENHEIT1() throws Exception {
-        double input = 400;
+        double input = 25.13;
         String output;
         String expected = "260";
 

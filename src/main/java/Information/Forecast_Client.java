@@ -1,23 +1,24 @@
 package Information;
 
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import Utility.Utilities;
 
-public class Postcode_Client {
-
-    public String Getzipcode(String a) {
+public class Forecast_Client {
+    public String GetWeatherData(String location) {
+        String API_KEY = "&appid=058f647dae36f7bd10afc148478615d9";
         HttpURLConnection connection = null;
         InputStream inputStream = null;
 
         try {
-            connection = (HttpURLConnection) (new URL(Information_Directory.POSTCODE_API_URL + a)).openConnection();
+            connection = (HttpURLConnection) (new URL(Information_Directory.FORECAST_API_URL + location + API_KEY)).openConnection();
             connection.setRequestMethod("GET");
             connection.setDoInput(true);
             connection.setDoInput(true);
@@ -34,7 +35,6 @@ public class Postcode_Client {
 
             inputStream.close();
             connection.disconnect();
-
             return stringBuffer.toString();
 
         } catch (IOException e) {

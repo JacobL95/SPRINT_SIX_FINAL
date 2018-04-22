@@ -3,7 +3,6 @@ package Information;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import Structure_Model.Location_Model;
 import Structure_Model.Weather_Hub_Model;
 import Utility.Utilities;
@@ -15,52 +14,32 @@ public class JSON_Parser {
         try {
             JSONObject jsonObject = new JSONObject(data);
             Location_Model location = new Location_Model();
-
 //          Coordinate Getter
             JSONObject coordinateObject = Utilities.getObj("coord", jsonObject);
             location.setLat(Utilities.getFloat("lat", coordinateObject));
             location.setLon(Utilities.getFloat("lon", coordinateObject));
-
 //          System Object Getter
             JSONObject systemObject = Utilities.getObj("sys", jsonObject);
-            location.setCountry(Utilities.getString("country", systemObject));
-            location.setLastupdates(Utilities.getInt("dt", jsonObject));
-            location.setSunrise(Utilities.getInt("sunrise", systemObject));
-            location.setSunset(Utilities.getInt("sunset", systemObject));
             location.setCity(Utilities.getString("name", jsonObject));
             weather.location = location;
-
 //          Weather Information Getter
             JSONArray jsonArray = jsonObject.getJSONArray("weather");
             JSONObject jsonObjectWeather = jsonArray.getJSONObject(0);
-            weather.currentCondition.setWeatherID(Utilities.getInt("id", jsonObjectWeather));
             weather.currentCondition.setDescription(Utilities.getString("description", jsonObjectWeather));
             weather.currentCondition.setCondtion(Utilities.getString("main", jsonObjectWeather));
-            weather.currentCondition.setIcon(Utilities.getString("icon", jsonObjectWeather));
-
 //          Main Temperature Getter
             JSONObject mainObject = Utilities.getObj("main", jsonObject);
             weather.currentCondition.setTemp(Utilities.getDouble("temp", mainObject));
             weather.currentCondition.setHumidty(Utilities.getInt("humidity", mainObject));
-            weather.currentCondition.setPressure(Utilities.getInt("pressure", mainObject));
             weather.currentCondition.setMaxTemp(Utilities.getFloat("temp_max", mainObject));
             weather.currentCondition.setMinTemp(Utilities.getFloat("temp_min", mainObject));
-
-
 //          Wind Getter
             JSONObject windObject = Utilities.getObj("wind", jsonObject);
             weather.wind.setSpeed(Utilities.getFloat("speed", windObject));
-            weather.wind.setDegree(Utilities.getFloat("deg", windObject));
-
-//          Cloud Getter
-            JSONObject cloudObject = Utilities.getObj("clouds", jsonObject);
-            weather.clouds.setPrecipitation(Utilities.getInt("all", cloudObject));
-
             return weather;
 
         } catch (JSONException e) {
             e.printStackTrace();
-
             return null;
         }
     }

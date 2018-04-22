@@ -129,4 +129,59 @@ public class DISPLAY_Utility {
         PreMadeInt = (int)number;
         return PreMadeInt;
     }
+
+    public String date_modifier(String a){
+        return ChangeDate(a);
+    }
+
+    private String ChangeDate (String a){
+
+        String Year = a.substring(0,4);
+        String Month = a.substring(5,7);
+        String Date = a.substring(8,10);
+
+        String newdate = new String(Date_Number_to_Name(Month) + ", " + Date + ", " + Year);
+        return newdate;
+    }
+
+    private String Date_Number_to_Name (String b){
+
+        if (b.equals("01")){
+            b = "January";
+        }
+        if (b.equals("02")){
+            b = "February";
+        }
+        if (b.equals("03")){
+            b = "March";
+        }
+        if (b.equals("04")){
+            b = "April";
+        }
+        if (b.equals("05")){
+            b = "May";
+        }
+        if (b.equals("06")){
+            b = "June";
+        }
+        if (b.equals("07")){
+            b = "July";
+        }
+        if (b.equals("08")){
+            b = "August";
+        }
+        if (b.equals("09")){
+            b = "September";
+        }
+        if (b.equals("10")){
+            b = "October";
+        }
+        if (b.equals("11")){
+            b = "November";
+        }
+        if (b.equals("12")){
+            b = "December";
+        }
+        return b;
+    }
 }

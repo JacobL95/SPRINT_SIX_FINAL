@@ -132,6 +132,12 @@ public class HomepageActivity extends AppCompatActivity implements AdapterView.O
             GoToWeatherDetails.putExtra(PassedStringExtra, Coordinates);
             startActivity(GoToWeatherDetails);
         }
+        if(item.getItemId() == R.id.Forecast){
+            Intent GoToWeatherDetails = new Intent(this, ForecastActivity.class);
+            Coordinates = LocationSaver.getString("saved coordinates", "");
+            GoToWeatherDetails.putExtra(PassedStringExtra, Coordinates);
+            startActivity(GoToWeatherDetails);
+        }
 
         return super.onOptionsItemSelected(item);
     }

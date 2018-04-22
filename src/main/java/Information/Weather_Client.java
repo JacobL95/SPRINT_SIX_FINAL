@@ -41,7 +41,6 @@ public class Weather_Client {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return null;
     }
 }

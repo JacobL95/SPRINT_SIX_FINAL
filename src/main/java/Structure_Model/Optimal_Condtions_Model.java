@@ -386,7 +386,6 @@ public class Optimal_Condtions_Model {
 
      public String StringComposer(String temp, int integer, String activity){
 
-         Log.v("KKKKKKKKKKKKKK", temp);
          if (integer == 1){
              PreMadeString = (new String("It's to windy for " + activity + "." ));
          }else {

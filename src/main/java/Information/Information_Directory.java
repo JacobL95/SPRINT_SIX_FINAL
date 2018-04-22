@@ -7,6 +7,7 @@ public class Information_Directory {
     public static final String PassedInt = "com.example.jacob.weatherornot.PassedInt;";
     public static final String API_KEY = "&appid=058f647dae36f7bd10afc148478615d9";
     public static final String API_URL = "http://api.openweathermap.org/data/2.5/weather?";
+    public static final String FORECAST_API_URL = "http://api.openweathermap.org/data/2.5/forecast?";
     public static final String POSTCODE_API_URL = "https://api.bring.com/shippingguide/api/postalCode.json?clientUrl=insertYourClientUrlHere&country=US&pnr=";
     public static final String ICON_API_URL = "http://openweathermap.org/img/w/";
     public static final int ZipcodeLength = 5;
@@ -30,8 +31,5 @@ public class Information_Directory {
     public String getIconApiUrl(){
         return ICON_API_URL;
     }
-
-
-
 
 }

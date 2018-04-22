@@ -23,7 +23,8 @@
         <activity android:name=".AboutActivity" />
         <activity android:name=".HowToUseActivity" />
         <activity android:name=".LocationChangeActivity" />
-        <activity android:name=".FullWeather"></activity>
+        <activity android:name=".FullWeather" />
+        <activity android:name=".ForecastActivity"></activity>
     </application>
 
 </manifest>
