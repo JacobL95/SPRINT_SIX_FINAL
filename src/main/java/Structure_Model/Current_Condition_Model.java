@@ -1,23 +1,13 @@
 package Structure_Model;
 public class Current_Condition_Model {
 
-    private int weatherID;
     private String condtion;
     private String description;
     private String icon;
-    private float pressure;
     private float humidty;
     private float MaxTemp;
     private float MinTemp;
     private double temp;
-
-    public int getWeatherID() {
-        return weatherID;
-    }
-
-    public void setWeatherID(int weatherID) {
-        this.weatherID = weatherID;
-    }
 
     public String getCondtion() {
         return condtion;
@@ -41,14 +31,6 @@ public class Current_Condition_Model {
 
     public void setIcon(String icon) {
         this.icon = icon;
-    }
-
-    public float getPressure() {
-        return pressure;
-    }
-
-    public void setPressure(float pressure) {
-        this.pressure = pressure;
     }
 
     public float getHumidty() {

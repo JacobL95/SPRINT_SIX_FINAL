@@ -10,6 +10,7 @@ public class Information_Directory {
     public static final String FORECAST_API_URL = "http://api.openweathermap.org/data/2.5/forecast?";
     public static final String POSTCODE_API_URL = "https://api.bring.com/shippingguide/api/postalCode.json?clientUrl=insertYourClientUrlHere&country=US&pnr=";
     public static final String ICON_API_URL = "http://openweathermap.org/img/w/";
+    public static final String Need_Umbrella = "Also you may want to consider bringing an Umbrella today";
     public static final int ZipcodeLength = 5;
 
     public String getPassedString(){

@@ -6,6 +6,8 @@ import com.example.jacob.weatherornot.R;
 
 import java.text.DecimalFormat;
 
+import Information.Information_Directory;
+
 public class DISPLAY_Utility {
 
     int Icon, PreMadeInt;
@@ -43,7 +45,7 @@ public class DISPLAY_Utility {
     public String formatDescription(String DisplayFormat) {
 
         if (DisplayFormat.equals("clear sky")) {
-            Description = "Clear Skys";
+            Description = "Clear Skies";
         }
         if (DisplayFormat.equals("rain and drizzle")) {
             Description = "Rain and Drizzle";
@@ -183,5 +185,56 @@ public class DISPLAY_Utility {
             b = "December";
         }
         return b;
+    }
+
+    public String What_To_Wear (int a){
+        String b = "";
+        if(a <= 40){
+            b = "It's very cold outside. You should consider wearing warm clothes such as a " +
+                    "Stalking Cap, " +
+                    "Long Sleeve Shirt, " +
+                    "Jeans, " +
+                    "and a Heavy Coat";
+        }
+        if(a > 40 && a <= 50){
+            b = "It's decently cold outside. You should consider wearing fairly warm clothes such as a " +
+                    "Stalking Cap, " +
+                    "Long Sleeve Shirt, " +
+                    "Jeans, " +
+                    "and a Light Jacket";
+        }
+        if(a > 50 && a <= 65){
+            b = "It's brisk outside. You should consider wearing clothes such as a " +
+                    "hoodie, " +
+                    "Long Sleeve Shirt, " +
+                    "and Jeans";
+        }
+        if(a > 65){
+            b = "It's nice out. You should consider wearing clothes such as a " +
+                    "Tee Shirt, " +
+                    "and Shorts";
+        }
+        return b;
+    }
+
+    public String Umbrella_Check(String DisplayFormat) {
+        String check = " ";
+
+        if (DisplayFormat.equals("rain and drizzle")) {
+            check = Information_Directory.Need_Umbrella;
+        }
+        if (DisplayFormat.equals("scattered clouds")) {
+            check = Information_Directory.Need_Umbrella;
+        }
+        if (DisplayFormat.equals("moderate rain")) {
+            check = Information_Directory.Need_Umbrella;
+        }
+        if (DisplayFormat.equals("mist")) {
+            check = Information_Directory.Need_Umbrella;
+        }
+        if (DisplayFormat.equals("light rain")) {
+            check = Information_Directory.Need_Umbrella;
+        }
+        return check;
     }
 }

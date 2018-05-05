@@ -17,6 +17,10 @@
         android:id="@+id/Forecast"
         android:title="5 Day" />
     <item
+        android:id="@+id/Clothing"
+        android:title="Clothing"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/About"
         android:title="About"
         app:showAsAction="never" />

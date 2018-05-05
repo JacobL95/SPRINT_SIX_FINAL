@@ -24,7 +24,8 @@
         <activity android:name=".HowToUseActivity" />
         <activity android:name=".LocationChangeActivity" />
         <activity android:name=".FullWeather" />
-        <activity android:name=".ForecastActivity"></activity>
+        <activity android:name=".ForecastActivity" />
+        <activity android:name=".DressCodeActivity"></activity>
     </application>
 
 </manifest>

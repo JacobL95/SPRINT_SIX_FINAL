@@ -30,7 +30,6 @@ public class GPS_Utility implements LocationListener {
             return null;
         }
 
-
         LocationManager LOCATION_OF_USER = (LocationManager)CURRENT_GPS_LOCATION.getSystemService(Context.LOCATION_SERVICE);
         boolean GPS_ENABLED = LOCATION_OF_USER.isProviderEnabled((LocationManager.GPS_PROVIDER));
 

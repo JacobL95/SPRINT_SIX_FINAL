@@ -22,12 +22,10 @@ public class Postcode_Client {
             connection.setDoInput(true);
             connection.setDoInput(true);
             connection.connect();
-
             StringBuffer stringBuffer = new StringBuffer();
             inputStream = connection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             String line = null;
-
             while ((line = bufferedReader.readLine()) != null) {
                 stringBuffer.append(line + "\r\n");
             }

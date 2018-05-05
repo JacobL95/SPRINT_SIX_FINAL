@@ -23,7 +23,6 @@ public class Forecast_Client {
             connection.setDoInput(true);
             connection.setDoInput(true);
             connection.connect();
-
             StringBuffer stringBuffer = new StringBuffer();
             inputStream = connection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
